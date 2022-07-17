@@ -1,0 +1,3 @@
+===NewLog===
+Collided: Bomb and Creeper
+===NewLog===
