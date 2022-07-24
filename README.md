@@ -199,11 +199,16 @@ public class Main
 <form action="mailto:malikvivaan@gmail.com" method="POST" enctype="multipart/form-data" name="EmailForm">
 Name:
 <br>
+<md-input-container>
 <input type="text" size="19" name="ContactName">
 <br>
 <br>
 Message:
 <br> 
 <textarea name="ContactComment" rows="6" cols="20">
-</textarea><br><br> <input type="submit" value="Submit"> 
+</textarea>
+<br>
+<br> 
+<input type="submit" value="Submit"> 
+</md-input-container>
 </form>
