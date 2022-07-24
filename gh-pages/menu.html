@@ -1,0 +1,96 @@
+<html style="padding: 0%;margin: 0px auto;">
+    <head>
+        <title>
+            MenuBar
+        </title>
+        <script src="MenuScript.js"></script>
+        <style>
+            iframe 
+            {
+                overflow: hidden;
+            }
+
+            tr
+            { 
+                padding: 0px; 
+                margin: 0px;
+            }
+
+            button
+            {
+                border: 1px solid rgb(52, 15, 86);
+                color: rgb(17, 0, 28);
+                padding: 12vh 20vh;
+                text-align: center;
+                text-decoration: none;
+                transition: all 0.2s ease;
+                /* transform: scale(1); */
+                display: inline-block;
+                font-size: 16%;
+                margin: 0px;
+                cursor: pointer;
+                background-color: rgb(132, 49, 209);
+                cursor: pointer;
+                position: relative;
+                overflow: hidden;
+                box-shadow: 6px 7px 40px -4px rgba(0, 0, 0, 0.2);
+            }
+
+            button:hover
+            {
+                /* transform: scale(1.1) perspective(1px); */
+                padding: 14vh 23vh;
+                background-color: rgb(156, 49, 255);
+            }
+
+            button span
+            {
+                position: absolute;
+                border-radius: 50%;
+                background-color: rgba(0, 0, 0, 0.3);
+                width: 100px;
+                height: 100px;
+                margin-top: -50px;
+                margin-left: -50px;
+                animation: ripple 1s;
+                opacity: 0;
+            }
+
+            @keyframes ripple 
+            {
+                from 
+                {
+                    opacity: 1;
+                    transform: scale(0);
+                }
+        
+                to 
+                {
+                    opacity: 0;
+                    transform: scale(10);
+                }
+            }
+        </style>
+    </head>
+    <body style="background-color: rgb(9, 6, 15); padding: 0px;margin: 0px;color: aliceblue;">
+        
+        <!--
+        <div style="float: right;vertical-align: middle;display: inline;">Some Company Name.</div>
+        <div style="float: left;vertical-align: middle;display: inline;"><img src="Logo.png" style="margin: 0%;width: 5%;height: auto;padding-left: 2.5%;padding-right: 2.5%;padding-top:5vh;padding-bottom: 6vh; background-color: rgb(75, 0, 133);"></div> 
+        -->
+        <table style = "height: 100vh auto; display: block; border: 0px; border-collapse: collapse; padding: 0%; margin: 0px;">
+            <tr>
+                <td style= "text-align: center; vertical-align: middle; width: 5%; padding: 0px; margin: 0px;"><img src="Logo.png" style="display: block;width: 100%;height: auto;"></td>
+                <td style= "text-align: center; vertical-align: middle;"><h1 style="display: block; padding: 0px; margin: 0px;">Some Company Name</h1></td>
+                <td style= "text-align: center; vertical-align: middle; width: 5%; padding: 0px; margin: 0px;"></td>
+
+            </tr>
+        </table>
+        <div style="text-align: center;">
+            <button id = "btn1" onclick="Ripple(event, this)">Home</button>
+            <button id = "btn2" onclick="Ripple(event, this)">Page 1</button>
+            <button id = "btn3" onclick="Ripple(event, this)">Page 2</button>
+            <button id = "btn4" onclick="Ripple(event, this)">Page 3</button>
+        </div>
+    </body>
+</html>
