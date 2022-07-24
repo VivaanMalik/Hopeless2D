@@ -11,7 +11,7 @@ public class Test
         try 
         {
             System.out.println(s);
-            FileWriter fw = new FileWriter("D:\\Totally_normalstuff\\yup_told ya\\Ha! On yo face\\bruh\\hehe boi\\SECRET\\My_stuff\\geminjin\\Project Hopeless2D\\src\\Hopeless2D\\OutputTest.txt", true);
+            FileWriter fw = new FileWriter(".\\OutputTest.txt", true);
             BufferedWriter bf = new BufferedWriter(fw);
             bf.write(s);
             bf.newLine();

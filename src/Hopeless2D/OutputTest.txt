@@ -1,8 +1,0 @@
-===NewLog===
-before
-after
-Collided: Bomb and Creeper
-===NewLog===
-before
-after
-Collided: Bomb and Creeper
