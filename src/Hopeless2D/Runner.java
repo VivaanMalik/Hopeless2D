@@ -103,7 +103,15 @@ public class Runner
         }
         catch (Exception e3)
         {
-            Test.Log(e3.getMessage());
+            System.out.println("error");
+            if (e3.getMessage()==null)
+            {
+                Runner.Error("setup() - "+e3.getCause().toString());
+            }
+            else 
+            {
+                Runner.Error(e3.getMessage());
+            }
         }
     }
 

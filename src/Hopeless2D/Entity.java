@@ -51,7 +51,8 @@ public class Entity
             {
                 for (int y = 0; y < images[i].getHeight(); y++)
                 {
-                    p.SetPixel(x, y, new color(images[i].getRGB(x, y), false));
+                    int rgb=images[i].getRGB(x, y);
+                    p.SetPixel(x, y, new color(rgb, false));
                 }
             }
             Sprites[i] = p;

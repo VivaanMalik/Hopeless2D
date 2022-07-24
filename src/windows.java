@@ -23,6 +23,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -165,15 +166,40 @@ public class windows extends classes
                 else
                 {
                     Test.Log("===NewLog===");
-                    Runtime rt = Runtime.getRuntime();
-                    try 
+                    Thread run = new Thread()
                     {
-                        rt.exec(new String[]{"java", ".\\Hopeless2D\\Runner.java", FILEPATH.toString()});
-                    } 
-                    catch (IOException e1) 
-                    {
-                        e1.printStackTrace();
-                    }
+                        public void run()
+                        {
+                            try 
+                            {
+                                Runtime rt = Runtime.getRuntime();
+                                Process proc;
+                                String msg="";
+                                proc = rt.exec(new String[]{"java", ".\\Hopeless2D\\Runner.java", FILEPATH.toString()});
+                                BufferedReader in = new BufferedReader(new InputStreamReader(proc.getInputStream()));
+                                String line;
+                                while ((line = in.readLine()) != null) 
+                                {
+                                    msg+=line+"\n";
+                                }
+                                BufferedReader b = new BufferedReader(new InputStreamReader(proc.getErrorStream()));
+                                while ((line=b.readLine())!=null) 
+                                {
+                                    msg+="\n"+line;
+                                }
+                                proc.waitFor();
+                                if (proc.exitValue()!=0)
+                                {
+                                    Runner.Error(msg);
+                                }
+                            } 
+                            catch (IOException | InterruptedException e1) 
+                            {
+                                e1.printStackTrace();
+                            }
+                        }
+                    };
+                    run.start();
                 }
             }
             else if (e.getActionCommand()==ActionList.PIXELART.name())

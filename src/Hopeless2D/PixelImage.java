@@ -11,9 +11,9 @@ public class PixelImage
         PixelX=x;
         PixelY=y;
         PixelData=new color[y][x];
-        for (int xval = 0; xval < PixelData.length; xval++) 
+        for (int yval = 0; yval < PixelData.length; yval++) 
         {
-            for (int yval = 0; yval < PixelData[xval].length; yval++) 
+            for (int xval = 0; xval < PixelData[yval].length; xval++) 
             {
                 PixelData[yval][xval] = new color(0, 0, 0, 0);
             }

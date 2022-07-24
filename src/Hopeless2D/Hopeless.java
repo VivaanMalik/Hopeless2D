@@ -116,10 +116,19 @@ public class Hopeless
                     try 
                     {
                         Frame.invoke(FileClassObject);
+                        System.out.println("running");
                     } 
-                    catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException e1) 
+                    catch (IllegalAccessException | InvocationTargetException | RuntimeException e1) 
                     {
-                        Test.Log(e1.getMessage());
+                        System.out.println("error");
+                        if (e1.getMessage()==null)
+                        {
+                            Runner.Error("Frame() - "+e1.getCause().toString());
+                        }
+                        else 
+                        {
+                            Runner.Error(e1.getMessage());
+                        }
                     }
                     gw.entityes = P.PhysicsOhFy(Entities);
                     gw.UpdateWindow();
