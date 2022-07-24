@@ -3,10 +3,18 @@
     <head>
         <link rel="icon" type="image/x-icon" href="LogoSymbol.png">
         <title>
-            Hopeless2D: Make your failure
+            Hopeless2D: Example Code
         </title>
-        <script src = "MainScript.js"></script>
         <style>
+        	td
+        	{
+				height: 5vh;
+			}
+			table
+			{
+				border:1px rgb(255, 0, 94) solid;
+				border-collapse:collapse;
+			}
             button
             {
                 border: 1px solid rgb(51, 0, 19);
@@ -143,7 +151,7 @@
                 display: block;
                 height: 1px;
                 border: 0px;
-                border-top: 2vh solid rgb(255, 0, 94);
+                border-top: 2vh solid #ccc;
                 padding: 0%;
                 margin-left: 0;
                 width: 100px;
@@ -154,7 +162,7 @@
                 display: block;
                 height: 1px;
                 border: 0px;
-                border-top: 2px solid rgb(255, 0, 94);
+                border-top: 2px solid #ccc;
                 padding: 0%;
                 margin-left: 0;
                 width: 200px;
@@ -165,7 +173,7 @@
                 display: block;
                 height: 1px;
                 border: 0px;
-                border-top: 2px solid rgb(255, 0, 94);
+                border-top: 2px solid #ccc;
                 padding: 0%;
                 margin-left: 0;
             }
@@ -176,7 +184,7 @@
                 width: 69%;
                 text-align: left;
                 margin: 0px auto;
-                color: rgb(255, 0, 94);
+                color: rgb(255, 255, 255);
                 height: 100vh fit-content;
                 padding: 0px;
             }
@@ -186,43 +194,20 @@
                 background-color: rgb(34, 0, 9);
                 text-align: left;
                 margin: 0px auto;
-                color: rgb(255, 0, 94);
+                color: rgb(255, 255, 255);
                 height: 100vh fit-content;
                 padding: 0px;
             }
         </style>
     </head>
     <body>
-        <iframe src="menu.html" style="height:21vh;width:100%;padding: 0%;border: 0cm;margin: 0%;display: block;position: fixed;top:0;z-index: 100;"></iframe>
+        <iframe src="./menu.html" style="height:21vh;width:100%;padding: 0%;border: 0cm;margin: 0%;display: block;position: fixed;top:0;z-index: 100;" target="_parent"></iframe>
         <div id = "BodyTextContainer">
             <div style="height: 21vh;"></div>
-
             <div style="padding: 2vh 5vh;">
-                <h1>Hopeless2D: A failure with a shorter lifespan than your IQ</h1>
-                <div id="generalhr"></div>
-                <p>This failure was made with my own last 2 brain cells. I started this when I was just 14. This garbage was the consequence of my stupid train of thought and a rubick's cube... You might wondering, "HOW THE HELL DOES A CUBE LEAD YOU TO MAKE A WHOLE FRIGGIN GAME ENGINE WITH COLLISION SYSTEM, ROTATION, PIXEL ART ENGINE, CODE EDITOR, JAVA PACKAGE, TRANSPERANCY OF ENTITIES, KEYBOARD INPUTS AND A FULLY FUNCTION RUNTIME ERROR HANDLER?!?!?!?!"...</p>
-                <p>Well the answer is quite simple... The cube made me want to render it on a screen, then I realised it was 3d and I am dumb so I randomly started scrolling through youtube because I was bored and too lazy to render a cube... Until I landed on a video which showed the concept of rendering 3D objects. Why did i suddenly feel like coding a whole rendering engine? I really don't know. A failing 3D rendering engline. I decided to make a 2D one and then convert that to a game engine. And here we are...</p>
-            </div>
-
-            <div class = "Slideshow">
-                <div class = "Slide fade Slideshow1">
-                    <div class="SlidesCount">1 / 3</div>
-                    <img class = "SlideImg" src="PixelArt.png">
-                    <div class="Captiontext">Pixel art</div>
-                </div>
-                <div class = "Slide fade Slideshow1">
-                    <div class="SlidesCount">2 / 3</div>
-                    <img class = "SlideImg" src="Code.png">
-                    <div class="Captiontext">Code Editor</div>
-                </div>
-                <div class = "Slide fade Slideshow1">
-                    <div class="SlidesCount">3 / 3</div>
-                    <img class = "SlideImg" src="Game.png">
-                    <div class="Captiontext">Game test</div>
-                </div>
+                <script src="https://gist.github.com/VivaanMalik/161ef6492ce69d2bb6fd74d43ae418b8.js"></script>
             </div>
         </div>
-
         <div id = "UnconfinedBodyTextContainer">
             <img src="LogoSymbolMenu.png" width="100%">
         </div>

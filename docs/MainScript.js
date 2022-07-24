@@ -14,7 +14,7 @@ function Ripple (event, e)
     }, 300);
 }
 
-let SlideClasses = ["Slideshow1", 'Slideshow2'];
+let SlideClasses = ["Slideshow1"];
 SlideIndexes = [0, 0];
 
 window.onload = function showSlides()

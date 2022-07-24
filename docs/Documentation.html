@@ -1,0 +1,421 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" type="image/x-icon" href="LogoSymbol.png">
+        <title>
+            Hopeless2D: Documentation
+        </title>
+        <style>
+        	td
+        	{
+				height: 5vh;
+			}
+			table
+			{
+				border:1px rgb(255, 0, 94) solid;
+				border-collapse:collapse;
+			}
+            button
+            {
+                border: 1px solid rgb(51, 0, 19);
+                color: rgb(0, 0, 0);
+                text-align: center;
+                text-decoration: none;
+                transition: all 0.2s ease;
+                transform: scale(1);
+                display: inline-block;
+                font-size: 16%;
+                margin: 0px;
+                /* padding: 0vh 0vh; */
+                cursor: pointer;
+                background-color: rgb(172, 0, 63);
+                cursor: pointer;
+                position: relative;
+                overflow: hidden;
+                box-shadow: 6px 7px 40px -4px rgba(0, 0, 0, 0.2);
+            }
+
+            button:hover
+            {
+                transform: scale(1.2) perspective(1px);
+                background-color: rgb(255, 0, 94);
+            }
+
+            button span
+            {
+                position: absolute;
+                border-radius: 50%;
+                background-color: rgba(0, 0, 0, 0.3);
+                width: 100px;
+                height: 100px;
+                margin-top: -50px;
+                margin-left: -50px;
+                animation: ripple 3s;
+                opacity: 0;
+            }
+
+            @keyframes ripple 
+            {
+                from 
+                {
+                    opacity: 1;
+                    transform: scale(0);
+                }
+        
+                to 
+                {
+                    opacity: 0;
+                    transform: scale(100);
+                }
+            }
+
+            html
+            {
+                background-color: rgb(62, 0, 28);
+                /* background-image: url("Runestone.png"); */
+                height: 100vh;
+                margin: 0vh auto;
+                padding: 0vh;
+            }
+
+            body
+            {
+                width: 100%;
+                padding: 0vh;
+                text-align: center;
+                height: 100vh;
+                margin: 0vh;
+            }
+
+            .BigAssButtons
+            {
+                width: 40vh;
+                height: 40vh;
+                vertical-align: middle;
+            }
+
+            .Slide 
+            {
+                display: none;
+            }
+            
+            .SlideImg 
+            {
+                vertical-align: middle;
+                height: 80vh;
+                width: auto;
+                margin: none;
+            }
+
+            .Slideshow 
+            {
+                position: relative;
+                overflow: hidden;
+                text-align: center;
+            }
+
+            .Captiontext
+            {
+                color: #f2f2f2;
+                font-size: 3vh;
+                padding: 0vh 1vh;
+                position: absolute;
+                bottom: 2vh;
+                width: 100%;
+                text-align: center;
+            }
+
+            .SlidesCount 
+            {
+                color: #f2f2f2;
+                font-size: 12px;
+                padding: 8px 12px;
+                position: absolute;
+                top: 0;
+            }
+
+            .fade 
+            {
+                animation-name: fade;
+                animation-duration: 1.5s;
+            }
+
+            @keyframes fade 
+            {
+                from {opacity: .4} 
+                to {opacity: 1}
+            }
+
+            #hundredvhhr
+            {
+                display: block;
+                height: 1px;
+                border: 0px;
+                border-top: 2vh solid #ccc;
+                padding: 0%;
+                margin-left: 0;
+                width: 100px;
+            }
+
+            #twohundredvhhr
+            {
+                display: block;
+                height: 1px;
+                border: 0px;
+                border-top: 2px solid #ccc;
+                padding: 0%;
+                margin-left: 0;
+                width: 200px;
+            }
+
+            #generalhr
+            {
+                display: block;
+                height: 1px;
+                border: 0px;
+                border-top: 2px solid #ccc;
+                padding: 0%;
+                margin-left: 0;
+            }
+            
+            #BodyTextContainer
+            {
+                background-color: rgb(45, 0, 19);
+                width: 69%;
+                text-align: left;
+                margin: 0px auto;
+                color: rgb(255, 255, 255);
+                height: 100vh fit-content;
+                padding: 0px;
+            }
+
+            #UnconfinedBodyTextContainer
+            {
+                background-color: rgb(34, 0, 9);
+                text-align: left;
+                margin: 0px auto;
+                color: rgb(255, 255, 255);
+                height: 100vh fit-content;
+                padding: 0px;
+            }
+        </style>
+    </head>
+    <body>
+        <iframe src="./menu.html" style="height:21vh;width:100%;padding: 0%;border: 0cm;margin: 0%;display: block;position: fixed;top:0;z-index: 100;" target="_parent"></iframe>
+        <div id = "BodyTextContainer">
+            <div style="height: 21vh;"></div>
+            <div style="padding: 2vh 5vh;">
+                <h1>DOCUMENTATION<span style="font-size: 1vh;"> prepare to die...</span></h1>
+                <div id="generalhr"></div>
+        <h2>Useful Hopeless commands</h2>
+    	<table style="width: 100%; font-family:Consolas" border="1">
+			<tr>
+				<td width="50%">run()</td>
+				<td>Starts game... put in setup() method</td>
+			</tr>
+			<tr>
+				<td>Instantiate(Entity)</td>
+				<td>Instantiates an Entity in the game window</td>
+			</tr>
+			<tr>
+				<td>Destroy(Entity)</td>
+				<td>Removes and Entity from the game window</td>
+			</tr>
+			<tr>
+				<td>SetFrameRate(int)</td>
+				<td>Sets target frames per second</td>
+			</tr>
+			<tr>
+				<td>Log(String)</td>
+				<td>Log text for debugging</td>
+			</tr>
+			<tr>
+				<td>String ProjectPath()</td>
+				<td>Returns the project path to use for paths on computer</td>
+			</tr>
+			<tr>
+				<td>float DeltaTime()</td>
+				<td>Time in seconds between 2 frames</td>
+			</tr>
+		</table>
+		<br>
+		<h2>Using other classes</h2>
+		<h3>Vector2</h3>
+			<table style="width: 100%; font-family:Consolas" border="1">
+					<tr>
+						<td width="50%">Vector2()</td>
+						<td>Initialize a new Vector2(0, 0)</td>
+					</tr>
+					<tr>
+						<td>Vector2(int x, int y)</td>
+						<td>Initialize a new Vector2(x, y)</td>
+					</tr>
+					<tr>
+						<td>x()</td>
+						<td>returns value x</td>
+					</tr>
+					<tr>
+						<td>y()</td>
+						<td>returns value y</td>
+					</tr>
+				</table>
+				<h3>color</h3>
+				<table style="width: 100%; font-family:Consolas" border="1">
+					<tr>
+						<td width="50%">color(int rgb, boolean isSameValue)</td>
+						<td>r, g, b = rgb a = 255  |  rgb int value to color</td>
+					</tr>
+					<tr>
+						<td>color(int R, int G, int B)</td>
+						<td>Initialize a color using rgb values</td>
+					</tr>
+					<tr>
+						<td>color(int R, int G, int B, int A)</td>
+						<td>Initialize a color using rgba values</td>
+					</tr>
+					<tr>
+						<td>r()</td>
+						<td>returns r value</td>
+					</tr>
+					<tr>
+						<td>g()</td>
+						<td>returns g value</td>
+					</tr>
+					<tr>
+						<td>b()</td>
+						<td>returns b value</td>
+					</tr>
+					<tr>
+						<td>a()</td>
+						<td>returns a value</td>
+					</tr>
+				</table>
+				<h3>PixelImage</h3>
+				
+				<table style="width: 100%; font-family:Consolas" border="1">
+					<tr>
+						<td width="50%">PixelImage(int x, int y)</td>
+						<td>Initialize an empty PixelImage with dimensions x, y</td>
+					</tr>
+					<tr>
+						<td>PixelImage(color[][] PixelColorData)</td>
+						<td>Initialize PixelImage with a 2D color array</td>
+					</tr>
+					<tr>
+						<td>SetPixel(int x, int y, color col)</td>
+						<td>set pixel at x, y to color col</td>
+					</tr>
+					<tr>
+						<td>color GetPixel(int x, int y)</td>
+						<td>returns value at x, y</td>
+					</tr>
+					<tr>
+						<td>Vector2 GetDimension()</td>
+						<td>returns the dimension (x, y)</td>
+					</tr>
+				</table>
+				<h3>Entity</h3>
+				
+				<table style="width: 100%; font-family:Consolas" border="1">
+
+					<tr>
+						<td width="50%">Entity(PixelImage Sprite, Vector2 size, Vector2 pos, int rot, boolean enablecollision)</td>
+						<td>Initialize a basic Entity (1 image)</td>
+					</tr>
+					<tr>
+						<td>Entity(PixelImage[] Sprite, Vector2 size, Vector2 pos, int rot, boolean enablecollision)</td>
+						<td>Initialize a basic Entity (multiple images)</td>
+					</tr>
+					<tr>
+						<td>Entity(BufferedImage[] images, Vector2 size, Vector2 pos, int rot, boolean enablecollision)</td>
+						<td>Initialize a basic Entity (multiple images using 
+						BufferedImage)</td>
+					</tr>
+					<tr>
+						<td><span>OnCollide(String)</span></td>
+						<td>Runs method if object is collided... Parameter takes name of the method in Main.java</td>
+					</tr>
+					<tr>
+						<td><span>SetName(String)</span></td>
+						<td>Sets the name of the Entity</td>
+					</tr>
+					<tr>
+						<td>boolean iscollidable()</td>
+						<td>returns boolean, whether or not the entity is using collision physics</td>
+					</tr>
+					<tr>
+						<td>int getRotation()</td>
+						<td>returns rotation of Entity (clockwise) in degress</td>
+					</tr>
+					<tr>
+						<td><span>Vector2 getposition()</span></td>
+						<td>returns entity position</td>
+					</tr>
+					<tr>
+						<td><span>Vector2 getoffsetposition()</span></td>
+						<td>returns offset position due to rotation on object</td>
+					</tr>
+					<tr>
+						<td><span>PixelImage[] getSprite()</span></td>
+						<td>returns sprites in array of PixelImage</td>
+					</tr>
+					<tr>
+						<td><span>Vector2 getSize()</span></td>
+						<td>returns entity size</td>
+					</tr>
+					<tr>
+						<td><span>setposition(Vector2)</span></td>
+						<td>set position of entity</td>
+					</tr>
+					<tr>
+						<td><span>setrotation(int)</span></td>
+						<td>set rotation of entity (clockwise)</td>
+					</tr>
+					<tr>
+						<td><span>setSprites(PixelImage[])</span></td>
+						<td>set sprites of entity</td>
+					</tr>
+					<tr>
+						<td><span>setSize(Vector2)</span></td>
+						<td>set size of enitity</td>
+					</tr>
+					<tr>
+						<td><span>GetImage(int)</span></td>
+						<td>returns an Image of sprite from the array based on paramter index</td>
+					</tr>
+				</table>
+				<h2>Default methods in Main.java (Don't delete these)</h2>		
+				
+				<table style="width: 100%; font-family:Consolas" border="1">
+					<tr>
+						<td>setup()</td>
+						<td>Runs at the start of the game</td>
+					</tr>
+					<tr>
+						<td>Frame()</td>
+						<td>Runs every frame</td>
+					</tr>
+					<tr>
+						<td>keyPressed(KeyEvent e)</td>
+						<td>Runs every time a key is pressed</td>
+					</tr>
+					<tr>
+						<td>keyReleased(KeyEvent e)</td>
+						<td>Runs every time a key is released</td>
+					</tr>
+					<tr>
+						<td>keyTyped(KeyEvent e)</td>
+						<td>Runs every time a key is typed</td>
+					</tr>
+				</table>
+				
+			</div>
+		</div>
+        <div id = "UnconfinedBodyTextContainer">
+            <img src="LogoSymbolMenu.png" width="100%">
+        </div>
+        <div id = "UnconfinedBodyTextContainer" style="height: 5vh;background-color: rgb(36, 0, 0);text-align: right;color:rgb(255, 0, 94); padding-right: 2vh;">
+            Made by Vivaan Malik
+        </div>
+    </body>
+</html>
