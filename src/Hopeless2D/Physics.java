@@ -1,6 +1,7 @@
 package Hopeless2D;
 
 import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.List;
 
 public class Physics 
@@ -32,15 +33,20 @@ public class Physics
                     {
                         if (checkforintersectionYaxis(out.get(i), out.get(i2)))
                         {
-                            Test.Log("Collided: "+out.get(i).name+" and "+out.get(i2).name);
                             out.get(i).isColliding(true);
                             out.get(i2).isColliding(true);
                             try 
                             {
-                                OriginalCode.getClass().getDeclaredMethod(out.get(i).CollisionMethod).invoke(OriginalCode);
-                                OriginalCode.getClass().getDeclaredMethod(out.get(i2).CollisionMethod).invoke(OriginalCode);
+                                // Class<?>[] string = {String.class};\
+                                Method collide1 = OriginalCode.getClass().getDeclaredMethod(out.get(i2).CollisionMethod, String.class);
+                                collide1.invoke(OriginalCode, out.get(i).name);
+                                if (out.size()>i2)
+                                {
+                                    Method collide2 = OriginalCode.getClass().getDeclaredMethod(out.get(i).CollisionMethod, String.class);
+                                    collide2.invoke(OriginalCode, out.get(i2).name);
+                                }
                             } 
-                            catch (NoSuchMethodException | SecurityException | IllegalAccessException | InvocationTargetException e) 
+                            catch (Exception e) 
                             {
                                 Test.Log(e.getMessage());
                                 Runner.Error(e.getMessage());
