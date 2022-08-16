@@ -59,8 +59,7 @@ Kill me. Now.
 ```color GetPixel(int x, int y)``` returns value at x, y  
 ```Vector2 GetDimension()``` returns the dimension (x, y)  
   
-##### Entity  
-Note that you cant change between sprites yet...  
+##### Entity    
   
 ```Entity(PixelImage Sprite, Vector2 size, Vector2 pos, int rot, boolean enablecollision)```  
 ```Entity(PixelImage[] Sprite, Vector2 size, Vector2 pos, int rot, boolean enablecollision)```  
@@ -69,13 +68,15 @@ Note that you cant change between sprites yet...
 ```OnCollide(String)``` Runs method if object is collided... Runs the given method, in Main.java. And sends the name of the colliding object. 
 ```SetName(String)``` Sets the name of the Entity  
 ```boolean iscollidable()``` returns boolean, whether or not the entity is using collision physics  
-```int getRotation()``` returns rotation of Entity (clockwise) in degress  
+```int getRotation()``` returns rotation of Entity (clockwise) in degress 
+```int getImageIndex()``` returns the image index
 ```Vector2 getposition()``` returns entity position  
 ```Vector2 getoffsetposition()``` returns offset position due to rotation on object  
 ```PixelImage[] getSprite()``` returns sprites in array of PixelImage  
 ```Vector2 getSize()``` returns entity size  
 ```setposition(Vector2)``` set position of entity  
-```setrotation(int)``` set rotation of entity (clockwise)  
+```setrotation(int)``` set rotation of entity (clockwise) 
+```setImageIndex(int index)``` sets the image index to render
 ```setSprites(PixelImage[])``` set sprites of entity  
 ```setSize(Vector2)``` set size of enitity  
 ```GetImage(int)``` returns an Image of sprite from the array based on paramter index
