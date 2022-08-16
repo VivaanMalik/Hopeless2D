@@ -15,6 +15,7 @@ public class Entity
     boolean CollisionEnabled;
     boolean colliding;
     public String name;
+    int ImageIndex;
     String CollisionMethod;
 
     public Entity(PixelImage Sprite, Vector2 size, Vector2 pos, int rot, boolean enablecollision)
@@ -26,6 +27,7 @@ public class Entity
         position=pos;
         CollisionEnabled=enablecollision;
         name = "Unnamed";
+        ImageIndex = 0;
     }
 
     public Entity(PixelImage[] Sprite, Vector2 size, Vector2 pos, int rot, boolean enablecollision)
@@ -36,6 +38,7 @@ public class Entity
         rotation = rot;
         CollisionEnabled=enablecollision;
         name = "Unnamed";
+        ImageIndex =0;
     }
 
     public Entity(BufferedImage[] images, Vector2 size, Vector2 pos, int rot, boolean enablecollision)
@@ -59,6 +62,7 @@ public class Entity
         }
         CollisionEnabled=enablecollision;
         name = "Unnamed";
+        ImageIndex =0;
     }
 
     public void OnCollide(String m)
@@ -85,6 +89,11 @@ public class Entity
     {
         return rotation;
     }
+
+    public int getImageIndex()
+    {
+        return ImageIndex;
+    }
     
     public Vector2 getposition()
     {
@@ -109,6 +118,15 @@ public class Entity
     public void setposition(Vector2 pos)
     {
         position = pos;
+    }
+
+    public void setImageIndex(int index)
+    {
+        ImageIndex=index;
+        if (ImageIndex>=Sprites.length)
+        {
+            ImageIndex-=Sprites.length;
+        }
     }
 
     public void setrotation(int rot)

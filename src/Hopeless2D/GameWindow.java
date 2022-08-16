@@ -178,7 +178,7 @@ public class GameWindow
         for (int i =0; i < entityes.size(); i++)
         {
             Entity e = entityes.get(i);
-            Image img = e.GetImage(0);
+            Image img = e.GetImage(e.getImageIndex());
             img = img.getScaledInstance(e.getSize().x()+(e.getoffsetposition().x()*2), e.getSize().y()+(e.getoffsetposition().y()*2), BufferedImage.SCALE_DEFAULT);
             g2d.drawImage(img, e.getposition().x()-e.getoffsetposition().x(), e.getposition().y()-e.getoffsetposition().y(), frem);
         }
