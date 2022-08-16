@@ -175,7 +175,7 @@ public class windows extends classes
                                 Runtime rt = Runtime.getRuntime();
                                 Process proc;
                                 String msg="";
-                                proc = rt.exec(new String[]{"java", ".\\Hopeless2D\\Runner.java", FILEPATH.toString()});
+                                proc = rt.exec(new String[]{"java", "Hopeless2D\\Runner.java", FILEPATH.toString()});
                                 BufferedReader in = new BufferedReader(new InputStreamReader(proc.getInputStream()));
                                 String line;
                                 while ((line = in.readLine()) != null) 
