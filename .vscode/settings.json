@@ -1,0 +1,12 @@
+{
+    "java.project.referencedLibraries": {
+        "include": [
+            "lib/**/*.jar",
+            "d:\\java\\OpenGL\\jogamp-all-platforms\\jogamp-all-platforms\\jar\\gluegen-rt.jar",
+            "d:\\java\\OpenGL\\jogamp-all-platforms\\jogamp-all-platforms\\jar\\jogl-all.jar"
+        ],
+        "exclude": [
+            "d:\\java\\gluegen-rt.jar"
+        ]
+    }
+}

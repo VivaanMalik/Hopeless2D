@@ -66,7 +66,7 @@ Note that you cant change between sprites yet...
 ```Entity(PixelImage[] Sprite, Vector2 size, Vector2 pos, int rot, boolean enablecollision)```  
 ```Entity(BufferedImage[] images, Vector2 size, Vector2 pos, int rot, boolean enablecollision)```  
   
-```OnCollide(String)``` Runs method if object is collided... Parameter takes name of the method in Main.java  
+```OnCollide(String)``` Runs method if object is collided... Runs the given method, in Main.java. And sends the name of the colliding object. 
 ```SetName(String)``` Sets the name of the Entity  
 ```boolean iscollidable()``` returns boolean, whether or not the entity is using collision physics  
 ```int getRotation()``` returns rotation of Entity (clockwise) in degress  
